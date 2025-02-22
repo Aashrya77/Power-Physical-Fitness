@@ -1,0 +1,188 @@
+.plan-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 2rem auto;
+}
+
+.plan-page h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.plan-page p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.pricing-options {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.pricing-option {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  padding: 3.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-option h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-option p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.pricing-option:hover {
+  border-color: #1e90ff;
+  box-shadow: 0 4px 8px rgba(30, 144, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.back-button {
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #1e90ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  
+}
+
+.back-button:hover {
+  background-color: #187bcd;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .plan-page {
+    padding: 1.5rem;
+  }
+
+  .plan-page h1 {
+    font-size: 2.2rem;
+  }
+
+  .pricing-options {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .pricing-option {
+    width: 150px;
+    padding: 1.2rem;
+  }
+
+  .pricing-option h3 {
+    font-size: 1.15rem;
+  }
+
+  .pricing-option p {
+    font-size: 1.1rem;
+  }
+
+  .back-button {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .plan-page {
+    padding: 1rem;
+  }
+
+  .plan-page h1 {
+    font-size: 2rem;
+  }
+
+  .pricing-options {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .pricing-option {
+    width: 130px;
+    padding: 1rem;
+  }
+
+  .pricing-option h3 {
+    font-size: 1rem;
+  }
+
+  .pricing-option p {
+    font-size: 1rem;
+  }
+
+  .back-button {
+    padding: 1rem;
+    width: 70%;
+    display: block;
+    margin: 1rem auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .plan-page {
+    padding: 1rem;
+  }
+
+  .plan-page h1 {
+    font-size: 1.8rem;
+  }
+
+  .plan-page p {
+    font-size: 0.9rem;
+  }
+
+  .pricing-options {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .pricing-option {
+    width: 80%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .pricing-option h3 {
+    font-size: 1rem;
+  }
+
+  .pricing-option p {
+    font-size: 1rem;
+  }
+
+  .back-button {
+    padding: 1rem;
+    width: 50%;
+    display: block;
+    margin: 1rem auto;
+  }
+}

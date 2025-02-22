@@ -1,0 +1,189 @@
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px 20px; 
+  background-color: #111111;
+  color: white;
+  top: 0;
+  height: fit-content;
+  transition: .4s;
+  position: sticky;
+  z-index: 1;
+  width: 100%;
+  gap: 3rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+}
+
+.navbar-logo {
+  width: 4rem;
+  height: 4rem;
+  background-color: white;
+  border-radius: 40px;
+  cursor: pointer;
+}
+.navbar-logo img{
+  width: 100%;
+  height: 100%;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex; /* Display links in a row on desktop */
+  gap: 1.5rem;
+  align-items: center;
+  max-height: 0;
+  background-color: #222;
+  
+}
+
+/* Hide max-height and overflow for desktop */
+.navbar-links li {
+  margin-left: 20px; /* Margin between list items */
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s; /* Smooth transitions for hover effects */
+  cursor: pointer;
+}
+
+.navbar-links a:hover {
+  color: cornflowerblue;
+  text-decoration: underline;
+  background-color: rgba(100, 149, 237, 0.2); /* Light background on hover */
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.nav-register {
+  padding: 0.8rem 1.5rem;
+  font-weight: bold;
+  background-color: cornflowerblue;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition and subtle scale */
+}
+
+.navbar.active{
+  position: fixed;
+  z-index: 1;
+  transition: .3s;
+  width: 100%;
+}
+
+.nav-register:hover {
+  background-color: #555;
+  transform: scale(1.05);
+  letter-spacing: 1.5px;
+  transition: .5;
+}
+/* Hamburger Button */
+.hamburger {
+  display: none; /* Hide the hamburger button by default */
+  flex-direction: column;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  position: absolute; /* Position it absolutely within the navbar */
+  right: 30px; /* Align it to the right */
+  top: 20px; /* Adjust the top position */
+  z-index: 10; /* Ensure it stays on top of other elements */
+}
+
+/* Bar styles for hamburger */
+
+.profile{
+  width: 3rem;height: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+
+}
+
+.profileSection{
+    position: relative;
+}
+
+.profileList {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff; /* Adjust as needed */
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  z-index: 1000;
+  list-style: none;
+  min-width: 170px; 
+  transition: .3s ease-in-out;
+}
+.profileSection:hover .profileList {
+  display: block;
+}
+
+.profileList li {
+  cursor: pointer;
+  padding: 0.75rem 1rem;  
+  margin: 0;
+  transition: background-color 0.2s;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  color: #222;
+  font-weight: bold;
+}
+
+.profileList li:hover {
+  background-color: #ecebebe0; 
+}
+
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* Show hamburger button on mobile */
+  }
+
+  .navbar {
+    flex-direction: column; /* Stack navbar items vertically */
+    align-items: flex-start; /* Align items to the left */
+    padding: 20px;
+    padding-bottom: 0; /* Add padding for better spacing */
+  }
+  .navbar-links {
+    display: none; /* Hide initially */
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+    justify-content: center;
+
+  }
+
+  .navbar-links.active {
+    display: flex; /* Show when active */
+    max-height: 500px;
+    z-index: 1000;
+    border-radius: 15px;
+  }
+
+  .navbar-links li {
+    text-align: center; /* Center text in mobile */
+    margin: 5px 0; /* Space between list items */
+  }
+
+
+  .navbar-logo{
+    width: 2.5rem;height: 2.5rem;
+  }
+}

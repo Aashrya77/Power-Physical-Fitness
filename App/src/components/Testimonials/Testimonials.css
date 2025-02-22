@@ -1,0 +1,106 @@
+/* Main section for testimonials */
+.testimonials {
+  padding: 4rem 2rem;
+  background-color: #f7f9fc; /* Light Background Color */
+  color: #333; /* Text Color */
+  text-align: center;
+}
+
+/* Container for testimonial cards */
+.testimonial-cards {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Individual testimonial card */
+.testimonial-card {
+  background-color: #fdfbfb;
+  color: black;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease; /* Add a hover effect */
+}
+.testimonial-card h3{
+  margin: 0;
+}
+
+/* Testimonial card hover effect */
+.testimonial-card:hover {
+  transform: scale(1.05); /* Slightly scale the card on hover */
+}
+
+/* Testimonial image styling */
+.testimonial-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+}
+
+.testimonial-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* Styling for testimonial paragraphs */
+.testimonial-card p {
+  margin: 5px 0;
+}
+
+/* Main heading styles */
+.testimonials h1 {
+  font-size: xx-large;
+}
+
+.test-stroke {
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+/* Container for heading */
+.testimonials-heading {
+  padding: 2rem;
+  background-color: white;
+}
+
+/* Heading styles */
+.testimonials-heading h1 {
+  gap: 1.5rem;
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  margin-top: 0;
+  color: black;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .testimonials-heading h1 {
+    font-size: 2.5rem; /* Slightly smaller font size for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-heading h1 {
+    font-size: 2rem; /* Further reduce font size for small screens */
+  }
+  .testimonial-cards{
+    flex-direction: column;
+    
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials {
+    padding: 2rem 1rem; /* Reduce padding on extra small screens */
+  }
+
+  .testimonials-heading h1 {
+    font-size: 1.5rem; /* Even smaller font size for extra small screens */
+  }
+}

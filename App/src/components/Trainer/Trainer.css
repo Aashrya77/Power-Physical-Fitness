@@ -1,0 +1,92 @@
+.trainer-profiles {
+  padding: 4rem 2rem;
+  color: #333;
+  background-color: white;
+}
+
+.trainer-profiles h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.head {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.our-stroke {
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.Trainers {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  height: 50vh;
+}
+
+.left-t img {
+  width: 20rem;
+  border-radius: 15px;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.right-t {
+  display: flex;
+  flex-direction: column;
+  font-size: larger;
+  max-width: 30rem;
+  flex: 1;
+  gap: .6rem;
+}
+
+.right-t h3, .right-t p, .right-t h4{
+  margin: 0;
+}
+
+.toggles {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .Trainers {
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+  }  
+  .left-t img {
+    width: 100%;
+    max-width: 18rem;
+    height: auto;
+    margin-bottom: -.1rem;
+  }
+  .right-t {
+    text-align: center;
+    padding: 1rem;
+    
+  }
+}
+
+@media (max-width: 480px) {
+  .trainer-profiles {
+    padding: 2rem 1rem;
+  }
+
+  .trainer-profiles h2 {
+    font-size: 2rem;
+  }
+
+  .head {
+    font-size: 0.9rem;
+  }
+}

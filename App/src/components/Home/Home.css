@@ -1,0 +1,164 @@
+.hero {
+    display: flex;
+    flex-direction: column; /* Column for vertical stacking */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    padding: 0rem 5rem;
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+.hero-content {
+    font-size: xx-large;
+    text-align: center; /* Center text alignment */
+    z-index: 1; /* Bring content above video */
+    padding: 20px;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content h1{
+    margin: 0;
+}
+
+.hero-btn {
+    padding: 1rem 1.8rem;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: cornflowerblue;
+    color: white;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: .5s;
+    border: 1.5px solid cornflowerblue;
+    letter-spacing: 1px;
+    display: inline-block; /* Ensure button centers correctly */
+}
+
+.hero-btn:hover {
+    background: transparent;
+    border: 1.5px solid cornflowerblue;
+    transition: .5s;
+    color: cornflowerblue;
+}
+
+.stats {
+    display: flex;
+    gap: 2rem;
+    justify-content: center; /* Center stats horizontally */
+    margin-top: 1rem; /* Add margin for spacing */
+}
+
+.stats h4 {
+    margin: 0;
+}
+
+.stats p {
+    font-size: medium;
+    margin: 0;
+}
+
+.ad {
+    padding: 12px;
+    background-color: #363d42;
+    border-radius: 20px;
+    color: white;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center ad content */
+    font-size: 16px;
+    margin: 1rem auto; /* Center ad with margin */
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.ad > div {
+    position: absolute;
+    background-color: cornflowerblue;
+    width: 3.5rem;
+    height: 80%;
+    left: 5px;
+    border-radius: 3rem;
+    z-index: 1;
+}
+
+.ad > span {
+    z-index: 2;
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover; /* Ensures video covers the container */
+    z-index: -1; /* Places the video behind the content */
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+    z-index: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .hero-content {
+        font-size: xx-large; 
+       /* Decrease font size on smaller screens */
+    }
+
+    .hero-btn {
+        font-size: 14px; /* Smaller button text on smaller screens */
+    }
+
+    .stats h4 {
+        font-size: 1.5rem; /* Adjust stat heading size */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 2rem 2rem; /* Reduce padding on smaller screens */
+    }
+
+    .hero-content {
+        font-size: large;
+        padding: 10px; /* Smaller font size for content */
+    }
+
+    .hero-btn {
+        padding: 0.8rem 1.5rem; /* Adjust button padding */
+        font-size: 14px; /* Decrease button font size */
+    }
+
+    .ad {
+        font-size: 14px; /* Smaller font for ad */
+    }
+
+    .stats {
+        gap: 1rem; /* Smaller gap between stats */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        font-size: medium; /* Further decrease font size on very small screens */
+    }
+
+    .hero-btn {
+        font-size: 12px; /* Smaller button text */
+    }
+
+    .ad {
+        font-size: 12px; /* Smaller font for ad */
+    }
+}

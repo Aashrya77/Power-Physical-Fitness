@@ -1,0 +1,113 @@
+:root {
+  --primary-color: cornflowerblue;
+  --button-bg: black;
+  --button-text: white;
+  --premium-bg: linear-gradient(to bottom, #538feb, #98baec);
+}
+
+.plan-text {
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.heading {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
+  color: black;
+}
+
+.plans {
+  padding: 3rem;
+  background-color: #f5f5f5;
+}
+
+.plans-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.8rem;
+  margin-top: 1.8rem;
+  justify-content: center;
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  text-align: left;
+  padding: 1.2rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+  background: white;
+  color: black;
+}
+
+.plan:hover {
+  transform: scale(1.03);
+}
+
+.plan h1 {
+  text-align: left;
+  font-size: 2rem;
+  margin: 0;
+}
+.plan h4{
+  margin: 0;
+}
+
+.plan ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+  text-align: left;
+  padding: 0;
+}
+
+.plan ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.plan-btn {
+  padding: 10px 1rem;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.plan-btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.premium {
+  color: white;
+  background-image: var(--premium-bg);
+  border-radius: 8px;
+  scale: 1.10;
+}
+
+.premium-btn {
+  background-color: white;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2rem;
+    text-align: center;
+    display: block;
+  }
+}

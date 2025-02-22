@@ -1,0 +1,122 @@
+.contact-info {
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #002233, #004466, #6495ED);
+
+  color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+  }
+  
+  .contact-details h2, .social-links h3 {
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+
+  .contact-info h1{
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  .contact-details p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .contactLeft{
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+  }
+  
+  .social-links .icons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    
+  }
+  
+  .social-links a {
+    color: white; 
+    font-size: 1.5rem;
+    transition: color 0.3s;
+  }
+  
+  .social-links a:hover {
+    color: #3b82f6; /* Light blue on hover for contrast */
+  }
+
+
+  .AnyMessage form{
+    display: flex;
+    flex-direction: column;
+   padding: 25px 25px 25px;
+    border-radius: 20px;
+    gap: .3rem;
+    width: 28rem;
+    overflow-x: hidden;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    box-shadow: rgba(62, 62, 116, 0.4) 0 30px 60px -12px inset, 
+                rgba(14, 12, 129, 0.3) 0 18px 36px -18px inset,
+                rgba(0, 0, 0, 0.1) 0 10px 20px; /* Outer shadow */
+  }
+
+  .AnyMessage input{
+    padding: 8px 10px;
+    color: black;
+    border-radius: 6px;
+    
+
+  }
+
+  .AnyMessage{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .AnyMessage input:focus, .AnyMessage textarea:focus{
+    outline: none;
+    border: 2px solid cornflowerblue;
+  }
+
+  .AnyMessage textarea{
+    padding: 4px;
+   resize: none;
+   border: none;
+   border-radius: 6px;
+   height: 5rem;
+  }
+
+  .AnyMessage form label{
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .AnyMessage button{
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 14px 0px;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+
+  .AnyMessage button:hover{
+    background-color: #004466;
+  }
+  @media (max-width: 768px) {
+   .contact-details{
+    text-align: left;
+   }
+   .contact-details h2{
+    text-align: center;
+   }
+  }
+  

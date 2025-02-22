@@ -1,0 +1,124 @@
+.profile-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .back-btn{
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    color: cornflowerblue;
+      padding: 6px 10px;
+      margin: 0;
+      position: absolute;
+      left: 5;
+      top: 10;
+      cursor: pointer;
+      border-radius: 3px;
+  }
+
+  .back-btn:hover{
+    background-color: rgb(213, 211, 211);
+  }
+  
+  .profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+  .username {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+  }
+  
+  .subscription-info {
+
+    font-size: 1.1em;
+  }
+  
+  .subscription-info h3 {
+    color: #555;
+    margin-bottom: 10px;
+    margin-top: 6px;
+  }
+  
+  .subscription-info p {
+    margin: 5px 0;
+    color: #333;
+  }
+  
+  .subscription-info span {
+    font-weight: bold;
+  }
+  
+  .subscription-info .active {
+    color: #4caf50;
+  }
+  
+  .subscription-info .inactive {
+    color: #f44336;
+  }
+  
+  .upload-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .upload-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .prof-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    margin: 0 auto;
+  }
+  
+  .prof-modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .prof-close-btn {
+    position: absolute;
+    top: 4%;
+    right: 3%;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
