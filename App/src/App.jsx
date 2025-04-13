@@ -9,16 +9,14 @@ import ClassSchedule from "./components/ClassSchedule/ClassSchedule";
 import TrainerProfiles from "./components/Trainer/Trainer";
 import FacilitiesOverview from "./components/FacilitiesOverview/FacilitiesOverview";
 import FAQs from "./components/FAQs/FAQs";
-import CTA from "./components/CTA/CTA.JSX";
+import CTA from "./components/CTA/CTA.jsx";
 import ContactInfo from "./components/ContactInfo/ContactInfo";
-import Login from "./auth/Login";
-import Register from "./auth/register";
 import { AuthProvider } from "./auth/AuthContext";
 import PlanPage from "./components/PlanPage/PlanPage";
 import Profile from "./components/UserProfile/Profile";
 import Dashboard from "./components/Dashboard/Dashboard";
 import PaymentSuccess from './components/PaymentSuccess';
-
+import Auth from "./auth/Auth.jsx";
 
 import Confirm from "./components/ConfirmationPage/Confirm";
 
@@ -51,8 +49,7 @@ function App() {
             }
           />
           {/* Individual routes for login and register */}
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          <Route path="/newLogin" element={<Auth />} />
           {/* Other individual routes */}
           <Route path="/Dashboard" element={<Dashboard/>}/>
           <Route path="/intro" element={<Intro />} />
