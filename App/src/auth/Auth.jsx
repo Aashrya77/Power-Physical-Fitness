@@ -101,6 +101,7 @@ const Auth = () => {
 
   return (
     <div className="auth-container">
+    <h1>Login</h1>
       <div className="auth-box">
         <img src="/PowerLogo.png" alt="" />
         {error && <div className="error-message">{error}</div>}
