@@ -60,11 +60,41 @@ const profileUpdate = async (req, res) => {
   return  res.status(200).json({user: updatedUser})
 }
 
+const verifyAuth = async (req, res) => {
+  try {
+    const authHeader = req.headers.authorization;
+    const token = authHeader && authHeader.split(' ')[1];
+
+    if (!token) {
+      return res.status(401).json({ message: 'No token provided' });
+    }
+
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const user = await User.findById(decoded.userId).select('-password');
+
+    if (!user) {
+      return res.status(401).json({ message: 'User not found' });
+    }
+
+    res.status(200).json({
+      user: {
+        id: user._id,
+        username: user.username,
+        email: user.email,
+        isAdmin: user.isAdmin
+      }
+    });
+  } catch (error) {
+    res.status(401).json({ message: 'Invalid token' });
+  }
+};
+
 
 module.exports = {
     register,
     login,
     getUser,
     profileUpdate,
-    getAllUser
+    getAllUser,
+    verifyAuth
 }

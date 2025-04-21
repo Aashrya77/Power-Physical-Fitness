@@ -22,7 +22,7 @@ const Confirm = () => {
 
   const handlePayment = async (planId, months) => {
     try {
-      const token = localStorage.getItem('token');
+      const token = localStorage.getItem('authToken');
       if (!token) {
         alert('Please log in to make a payment');
         navigate('/login');

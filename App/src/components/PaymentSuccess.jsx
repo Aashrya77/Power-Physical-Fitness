@@ -22,7 +22,7 @@ const PaymentSuccess = () => {
           `http://localhost:5500/api/v1/gym/verify-payment?transaction_uuid=${transaction_uuid}&total_amount=${total_amount}`,
           {
             headers: {
-              Authorization: `Bearer ${localStorage.getItem('token')}`
+              Authorization: `Bearer ${localStorage.getItem('authToken')}`
             }
           }
         );

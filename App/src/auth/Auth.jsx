@@ -66,7 +66,7 @@ const Auth = () => {
 
     setLoading(true);
     try {
-      const endpoint = isRegister ? `${baseUrl}/api/v1/auth/register`: `${baseUrl}/api/v1/auth/login`;
+      const endpoint = isRegister ? `${baseUrl}/api/v1/gym/register`: `${baseUrl}/api/v1/gym/login`;
       const { data } = await axios.post(endpoint, formData);
 
       if (isRegister) {
@@ -101,7 +101,6 @@ const Auth = () => {
 
   return (
     <div className="auth-container">
-    <h1>Login</h1>
       <div className="auth-box">
         <img src="/PowerLogo.png" alt="" />
         {error && <div className="error-message">{error}</div>}

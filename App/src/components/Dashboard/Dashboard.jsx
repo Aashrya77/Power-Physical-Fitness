@@ -9,7 +9,7 @@ const [error, setError] = useState('')
     try {
       const response = await axios.get('http://localhost:5500/api/v1/gym/dashboard', {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem('token')}`
+          Authorization: `Bearer ${localStorage.getItem('authToken')}`
         }
       })
       setUsers(response.data.users)

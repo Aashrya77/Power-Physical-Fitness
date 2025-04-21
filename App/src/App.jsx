@@ -49,7 +49,7 @@ function App() {
             }
           />
           {/* Individual routes for login and register */}
-          <Route path="/newLogin" element={<Auth />} />
+          <Route path="/Login" element={<Auth />} />
           {/* Other individual routes */}
           <Route path="/Dashboard" element={<Dashboard/>}/>
           <Route path="/intro" element={<Intro />} />

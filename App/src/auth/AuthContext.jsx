@@ -23,7 +23,7 @@ export const AuthProvider = ({ children }) => {
 
   const verifyAuth = async () => {
     try {
-      const { data } = await axios.get(`${baseUrl}/api/v1/auth/verify`);
+      const { data } = await axios.get(`${baseUrl}/api/v1/gym/verify`);
       setUser(data.user);
       setIsLoggedIn(true);
     } catch (error) {

@@ -48,7 +48,7 @@ const Profile = ({ user }) => {
         {
           headers: {
             'Content-Type': 'multipart/form-data',
-            Authorization: `Bearer ${localStorage.getItem('token')}`,
+            Authorization: `Bearer ${localStorage.getItem('authToken')}`,
           },
         }
       );
@@ -69,7 +69,7 @@ const Profile = ({ user }) => {
 
   const getUser = async () => {
     try {
-      const token = localStorage.getItem("token");
+      const token = localStorage.getItem("authToken");
       const response = await axios.get(
         "http://localhost:5500/api/v1/gym/profile",
         {
