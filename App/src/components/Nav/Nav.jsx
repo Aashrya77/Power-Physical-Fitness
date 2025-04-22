@@ -57,7 +57,7 @@ const Navbar = () => {
 
   const getUser = async () => {
     try {
-      const token = localStorage.getItem("token");
+      const token = localStorage.getItem("authToken");
       const response = await axios.get(
         "http://localhost:5500/api/v1/gym/profile",
         {
