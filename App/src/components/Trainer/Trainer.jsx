@@ -22,7 +22,7 @@ const TrainerProfiles = () => {
 
     {
       id: 2,
-      name: "Yuhdean",
+      name: "Uday Khadka",
       specialty: "Cardio & HIIT",
       description: "Expert in high-intensity workouts and stamina building.",
       image: "/Trainers/Trainer2.jpg",
