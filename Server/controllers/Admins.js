@@ -1,7 +1,7 @@
 require('dotenv').config()
 
 const Users = require('../schema/User')
-
+//Create admin controller
 const createAdmin = async (req, res) => {
     const authorizedEmail = process.env.AUTHORIZED_PERSON
     try {
