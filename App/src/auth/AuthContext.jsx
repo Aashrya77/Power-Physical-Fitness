@@ -21,6 +21,7 @@ export const AuthProvider = ({ children }) => {
     }
   }, []);
 
+  //verify auth function to check if the user is logged in
   const verifyAuth = async () => {
     try {
       const { data } = await axios.get(`${baseUrl}/api/v1/gym/verify`);
