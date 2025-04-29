@@ -34,7 +34,7 @@ export const AuthProvider = ({ children }) => {
       setLoading(false);
     }
   };
-
+//login
   const login = (token, userData) => {
     localStorage.setItem('authToken', token);
     axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
