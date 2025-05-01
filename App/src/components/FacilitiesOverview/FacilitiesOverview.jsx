@@ -68,7 +68,6 @@ const FacilitiesOverview = () => {
         fitness goals.
       </p>
 
-      {/* Video Section */}
       <div className="video-container">
         <video controls>
           <source src="/Facilities/1027 (5).mp4" type="video/mp4" />
