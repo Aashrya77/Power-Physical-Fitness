@@ -1,6 +1,7 @@
 import React from 'react';
 import './Testimonials.css'; // Import your CSS file
 
+//Trainers data
 const testimonials = [
   {
     id: 1,
