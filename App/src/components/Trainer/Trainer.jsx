@@ -10,6 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 const TrainerProfiles = () => {
   const [selected, setSelected] = useState(0);
 
+  //TRAINERS DATA
   const trainers = [
     {
       id: 1,
