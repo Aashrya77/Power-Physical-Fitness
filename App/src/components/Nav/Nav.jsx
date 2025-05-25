@@ -101,7 +101,7 @@ const Navbar = () => {
 
         <ul className={`navbar-links ${isOpen ? "active" : ""}`}>
           <li>
-            <Link smooth={true} duration={500} to="/">
+            <Link smooth={true} duration={500} to="hero" onClick={() => setIsOpen(false)}>
               Home
             </Link>
           </li>

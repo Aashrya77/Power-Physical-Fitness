@@ -19,7 +19,7 @@ const Home = () => {
 
   return (
     <>
-      <section className="hero">
+      <section className="hero" id="hero">
         <video
           className="background-video"
           poster="\Home\BackgroundSagar.jpg"
@@ -56,9 +56,8 @@ const Home = () => {
               <p>Members Joined</p>
             </div>
           </div>
-          <Link to="plans">
-            {" "}
-            <button className="hero-btn">Get Started</button>
+          <Link to="#plans">
+          <input type="button" value='Get Started' className="hero-btn" />
           </Link>
         </div>
       </section>

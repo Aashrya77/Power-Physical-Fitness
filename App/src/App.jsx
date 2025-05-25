@@ -19,6 +19,7 @@ import PaymentSuccess from './components/PaymentSuccess';
 import Auth from "./auth/Auth.jsx";
 
 import Confirm from "./components/ConfirmationPage/Confirm";
+import ScorllToHashElement from "./ScrollToHashElement"; // Corrected path to ScrollToHashElement
 
 // Corrected path to register if necessary
 
@@ -26,7 +27,7 @@ function App() {
   return (
     <AuthProvider>
       <Router>
-       
+       <ScorllToHashElement />
         <Navbar />
         <Routes>
           {/* Home route rendering multiple sections */}
