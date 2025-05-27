@@ -3,6 +3,34 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaInstagram, FaTwit
 import "./ContactInfo.css";
 
 const ContactInfo = () => {
+  const sendEmail = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const message = form.message.value;
+    
+    try {
+      const response = await fetch('http://localhost:5500/api/v1/gym/send', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('authToken')}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, subject: `Message from ${name}`, text: message }),
+      });
+
+      if (response.ok) {
+        alert('Email sent successfully!');
+        form.reset();
+      } else {
+        alert('Failed to send email. Please try again later.');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('An error occurred while sending the email.');
+    }
+  }
   return (
     <section className="contact-info" id="contact">
       <div className="contactLeft">
@@ -22,7 +50,7 @@ const ContactInfo = () => {
       </div>
      
       <div className="AnyMessage">
-        <form action="">
+        <form action="" method="POST" onSubmit={sendEmail}>
           <label htmlFor="name">Name: </label>
           <input type="text" name="name" placeholder="Username"/>
           <label htmlFor="email">Email: </label>

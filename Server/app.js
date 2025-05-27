@@ -13,6 +13,7 @@ const paymentRouter= require('./controllers/epay')
 const path = require('path');
 const profileRoutes = require('./controllers/Profile');
 const helmet = require('helmet');
+const emailRouter = require('./routes/sendEmail');
 
 // Middleware
 app.use(cors({
@@ -50,6 +51,7 @@ app.use('/api/v1/gym', PlanRouter);
 app.use('/api/v1/gym', profileRoutes);
 app.use('/api/v1/gym', AdminRouter);
 app.use('/api/v1/gym', auth, paymentRouter);
+app.use('/api/v1/gym/send', emailRouter);
 
 const start = async () => {
   try {
