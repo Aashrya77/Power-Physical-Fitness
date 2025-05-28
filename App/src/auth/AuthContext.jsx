@@ -13,6 +13,7 @@ export const AuthProvider = ({ children }) => {
     // Check if user is logged in on mount
     const token = localStorage.getItem('authToken');
     if (token) {
+      // Set the token in axios headers
       axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
       // Verify token and get user data
       verifyAuth();
@@ -25,11 +26,19 @@ export const AuthProvider = ({ children }) => {
   const verifyAuth = async () => {
     try {
       const { data } = await axios.get(`${baseUrl}/api/v1/gym/verify`);
-      setUser(data.user);
-      setIsLoggedIn(true);
+      if (data && data.user) {
+        setUser(data.user);
+        setIsLoggedIn(true);
+      } else {
+        // If no user data is returned, clear the auth state
+        logout();
+      }
     } catch (error) {
       console.error('Auth verification failed:', error);
-      logout();
+      // Only logout if it's an authentication error (401)
+      if (error.response && error.response.status === 401) {
+        logout();
+      }
     } finally {
       setLoading(false);
     }

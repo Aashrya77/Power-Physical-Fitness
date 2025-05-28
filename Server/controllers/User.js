@@ -1,5 +1,5 @@
 const Users = require('../schema/User')
-
+const jwt = require('jsonwebtoken')
 
 
 const register = async (req, res) => {
@@ -62,15 +62,11 @@ const profileUpdate = async (req, res) => {
 
 const verifyAuth = async (req, res) => {
   try {
-    const authHeader = req.headers.authorization;
-    const token = authHeader && authHeader.split(' ')[1];
-
-    if (!token) {
-      return res.status(401).json({ message: 'No token provided' });
-    }
-
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    const user = await User.findById(decoded.userId).select('-password');
+    // We already have the user from the auth middleware
+    const { userId } = req.user;
+    
+    // Find the user by ID
+    const user = await Users.findById(userId).select('-password');
 
     if (!user) {
       return res.status(401).json({ message: 'User not found' });
@@ -81,11 +77,12 @@ const verifyAuth = async (req, res) => {
         id: user._id,
         username: user.username,
         email: user.email,
-        isAdmin: user.isAdmin
+        role: user.role
       }
     });
   } catch (error) {
-    res.status(401).json({ message: 'Invalid token' });
+    console.error('Error in verifyAuth:', error);
+    res.status(401).json({ message: 'Authentication failed' });
   }
 };
 
