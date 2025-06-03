@@ -51,7 +51,7 @@ app.use('/api/v1/gym', PlanRouter);
 app.use('/api/v1/gym', profileRoutes);
 app.use('/api/v1/gym', AdminRouter);
 app.use('/api/v1/gym', auth, paymentRouter);
-app.use('/api/v1/gym/send', emailRouter);
+app.use('/api/v1/gym', emailRouter);
 
 const start = async () => {
   try {
