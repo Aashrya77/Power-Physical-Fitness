@@ -1,6 +1,7 @@
 import React from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import "./ContactInfo.css";
+import { API_URL } from "../../config";
 
 const ContactInfo = () => {
   const sendEmail = async (e) => {
@@ -11,7 +12,7 @@ const ContactInfo = () => {
     const message = form.message.value;
     
     try {
-      const response = await fetch('http://localhost:5500/api/v1/gym/send', {
+      const response = await fetch(`${API_URL}/api/v1/gym/send`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('authToken')}`,
